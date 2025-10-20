@@ -24,7 +24,7 @@ javaForm.addEventListener("submit", function (event) {
     // Validate E-mail
 
     const email = emailJS.value.trim();
-    if (email.indexOf("@") === -1 || email.indexOf(".") === -1) {
+    if (!email.includes("@") || !email.includes(".")) {
         jsMessage.textContent = "Please enter a valid email address.";
         jsMessage.className = "error";
         return;
